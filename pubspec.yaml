@@ -1,4 +1,4 @@
-name: horusvisionengine
+name: horus_vision_engine
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   model_viewer_plus: ^1.9.3
+  video_player: ^2.9.5
 
 dev_dependencies:
   flutter_test:
