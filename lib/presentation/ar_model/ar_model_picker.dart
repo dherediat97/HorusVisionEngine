@@ -23,7 +23,6 @@ class _ARModelPickerState extends State<ARModelPicker> {
 
   @override
   Widget build(BuildContext context) {
-    print(models[_modelSelectedIndex]);
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
