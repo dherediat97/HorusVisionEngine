@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dropzone/flutter_dropzone.dart';
-import 'package:horus_vision_engine/ar_model_entity.dart';
-import 'package:horus_vision_engine/immersive_view.dart';
+import 'package:horus_vision_engine/presentation/ar_model/ar_model_entity.dart';
+import 'package:horus_vision_engine/presentation/immersive_view/immersive_view.dart';
 
 class ARModelPicker extends StatefulWidget {
   const ARModelPicker({super.key});
@@ -83,7 +83,7 @@ class _ARModelPickerState extends State<ARModelPicker> {
                               subtitle: Text(
                                 'Author: ${models[index].authorName}',
                               ),
-                              leading: Icon(Icons.qr_code_scanner),
+                              leading: Icon(Icons.rocket),
                               onTap: () {
                                 setState(() {
                                   _modelSelectedIndex = index;

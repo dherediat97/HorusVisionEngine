@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:horus_vision_engine/ar_model_picker.dart';
+import 'package:horus_vision_engine/presentation/ar_model/ar_model_picker.dart';
 
 void main() => runApp(HorusVisionEngineApp());
 
