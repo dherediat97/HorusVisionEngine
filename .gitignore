@@ -26,3 +26,5 @@ replay_pid*
 .dart_tool/
 .idea/
 build/
+
+.flutter-plugins-dependencies
