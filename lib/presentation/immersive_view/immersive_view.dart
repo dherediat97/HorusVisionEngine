@@ -22,14 +22,17 @@ class _ImmersiveViewState extends State<ImmersiveView> {
       },
       alt: 'Interactive 3D Model',
       ar: true,
-      loading: Loading.eager,
+      loading: Loading.lazy,
       arScale: ArScale.fixed,
       cameraControls: true,
       autoRotate: false,
-      disableZoom: true,
+      minCameraOrbit: "auto",
+      disableZoom: false,
       disablePan: true,
       disableTap: true,
       autoPlay: true,
+      debugLogging: false,
+      arPlacement: ArPlacement.wall,
     );
   }
 }
