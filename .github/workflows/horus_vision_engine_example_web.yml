@@ -1,0 +1,21 @@
+name: Horus Vision Engine Example App
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: subosito/flutter-action@v2
+          with:
+              channel: stable
+              cache: true
+        - run: flutter clean
+        - run: flutter pub get
+        - uses: bluefireteam/flutter-gh-pages@v9
+          with:
+            baseHref: /HorusVisionEngine/
+            targetBranch: gh-pages

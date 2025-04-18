@@ -1,56 +1,26 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'package:horus_vision_engine/ar_model_picker.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const HorusVisionEngine());
-}
+void main() => runApp(HorusVisionEngineApp());
 
-class HorusVisionEngine extends StatefulWidget {
-  const HorusVisionEngine({super.key});
+const String kDefault3DModel = "assets/models/immersive_film.glb";
+
+class HorusVisionEngineApp extends StatefulWidget {
+  const HorusVisionEngineApp({super.key});
 
   @override
-  State<HorusVisionEngine> createState() => _HorusVisionEngineState();
+  State<HorusVisionEngineApp> createState() => _HorusVisionEngineAppState();
 }
 
-class _HorusVisionEngineState extends State<HorusVisionEngine> {
+class _HorusVisionEngineAppState extends State<HorusVisionEngineApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Horus Vision Engine',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: ImmersiveView(),
-    );
-  }
-}
-
-class ImmersiveView extends StatefulWidget {
-  const ImmersiveView({super.key, this.modelSrc = 'assets/immersive_film.glb'});
-
-  final String modelSrc;
-
-  @override
-  State<ImmersiveView> createState() => _ImmersiveViewState();
-}
-
-class _ImmersiveViewState extends State<ImmersiveView> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ModelViewer(
-        src: widget.modelSrc,
-        alt: 'Immersive film',
-        ar: true,
-        arScale: ArScale.fixed,
-        cameraControls: true,
-        autoRotate: false,
-        disableZoom: true,
-        disablePan: true,
-        disableTap: true,
-        autoPlay: true,
-      ),
+      debugShowCheckedModeBanner: kDebugMode,
+      theme: ThemeData.dark(useMaterial3: true),
+      themeMode: ThemeMode.dark,
+      home: ARModelPicker(),
     );
   }
 }
