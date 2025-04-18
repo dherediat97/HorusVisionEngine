@@ -1,49 +1,26 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'package:horus_vision_engine/ar_model_picker.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+void main() => runApp(HorusVisionEngineApp());
+
+const String kDefault3DModel = "assets/models/immersive_film.glb";
+
+class HorusVisionEngineApp extends StatefulWidget {
+  const HorusVisionEngineApp({super.key});
+
+  @override
+  State<HorusVisionEngineApp> createState() => _HorusVisionEngineAppState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class _HorusVisionEngineAppState extends State<HorusVisionEngineApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Horus Vision Engine'),
-      ),
-      body: const ModelViewer(
-        backgroundColor: Colors.black87,
-        src: 'assets/immersive_film.glb',
-        alt: 'Immersive film',
-        ar: true,
-        arScale: ArScale.fixed,
-        cameraControls: true,
-        autoRotate: true,
-        disableZoom: true,
-        disablePan: true,
-        disableTap: true,
-        autoPlay: true,
-      ),
+      debugShowCheckedModeBanner: kDebugMode,
+      theme: ThemeData.dark(useMaterial3: true),
+      themeMode: ThemeMode.dark,
+      home: ARModelPicker(),
     );
   }
 }
