@@ -16,9 +16,9 @@ class _ARModelPickerState extends State<ARModelPicker> {
   int _selectedIndex = 0;
   int _modelSelectedIndex = 0;
   final models = List<ArModelEntity>.of([
-    ArModelEntity(authorName: 'Film Flu', modelName: 'immersive_film'),
-    ArModelEntity(authorName: 'vr-go', modelName: 'robot_expressive'),
-    ArModelEntity(authorName: 'HeroCraft', modelName: 'squirrel_girl'),
+    ArModelEntity(authorName: 'Film Flu', modelName: 'immersiveFilm'),
+    ArModelEntity(authorName: 'vr-go', modelName: 'robotExpressive'),
+    ArModelEntity(authorName: 'HeroCraft', modelName: 'squirrelGirl'),
   ]);
 
   @override
