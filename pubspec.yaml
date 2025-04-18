@@ -16,6 +16,6 @@ dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/models/immersive_film.glb
-    - assets/models/robot_expressive.glb
-    - assets/models/squirrel_girl.glb
+    - models/immersive_film.glb
+    - models/robot_expressive.glb
+    - models/squirrel_girl.glb
