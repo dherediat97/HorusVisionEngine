@@ -6,9 +6,9 @@ class AppAssets {
 
   static const String modelsFolder = '$assetsFolder/models';
 
-  static const String squirrelGirlModel = '$assetsFolder/logo.glb';
-  static const String immersiveFilmModel = '$assetsFolder/immersive_film.glb';
+  static const String squirrelGirlModel = '$modelsFolder/squirrel_girl.glb';
+  static const String immersiveFilmModel = '$modelsFolder/immersive_film.glb';
   static const String robotExpressiveModel =
-      '$assetsFolder/robot_expressive.glb';
+      '$modelsFolder/robot_expressive.glb';
   AppAssets._();
 }

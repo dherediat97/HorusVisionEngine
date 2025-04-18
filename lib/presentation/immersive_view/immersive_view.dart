@@ -16,8 +16,8 @@ class _ImmersiveViewState extends State<ImmersiveView> {
   Widget build(BuildContext context) {
     return ModelViewer(
       src: switch (widget.modelSrc) {
-        'immersive_film' => AppAssets.immersiveFilmModel,
-        'robot_expressive' => AppAssets.robotExpressiveModel,
+        'immersiveFilm' => AppAssets.immersiveFilmModel,
+        'robotExpressive' => AppAssets.robotExpressiveModel,
         _ => AppAssets.squirrelGirlModel,
       },
       alt: 'Interactive 3D Model',
