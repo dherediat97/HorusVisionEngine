@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horus_vision_engine/app/app_assets.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 class ImmersiveView extends StatefulWidget {
@@ -14,7 +15,11 @@ class _ImmersiveViewState extends State<ImmersiveView> {
   @override
   Widget build(BuildContext context) {
     return ModelViewer(
-      src: 'assets/models/${widget.modelSrc}.glb',
+      src: switch (widget.modelSrc) {
+        'immersive_film' => AppAssets.immersiveFilmModel,
+        'robot_expressive' => AppAssets.robotExpressiveModel,
+        _ => AppAssets.squirrelGirlModel,
+      },
       alt: 'Interactive 3D Model',
       ar: true,
       loading: Loading.eager,
